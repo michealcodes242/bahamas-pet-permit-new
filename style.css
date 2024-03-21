@@ -30,6 +30,19 @@ body {
   
 }
 
+iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height: 100%; /* Set height to viewport height */
+  border: none;
+  padding: 0;
+  
+ 
+}
+
 
 /* Typography */
 
@@ -59,14 +72,15 @@ h2 {
 p {
     color:var(--dark-grey);
     font-weight:light;
-    max-width:40ch;
+    max-width:60ch;
     line-height:27px;
     letter-spacing: 3px;
     margin:4rem 0;
+    padding:1.125rem ;
 }
 
 #center {
-  max-width:auto;
+  max-width:unset;
 
 }
 
@@ -218,7 +232,7 @@ h3 {
 
 
 .flex-apply {
-  height:700px;
+  margin-bottom:2.5rem;
   display:flex;
   justify-content: space-evenly;
 }
@@ -703,57 +717,6 @@ footer {
 
 
 
-
-
-
-
-.button-glow {
-  padding: 0.75em 2em;
-  text-align: center;
-  text-decoration: none;
-  color:var(--dark-blue);
-  border: 2px solid var(--dark-blue);
-  font-size: 11px;
-  display: inline-block;
-  border-radius: 0.3em;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-  
-  }
-
-
-
-.button-glow::after {
-  content: '';
-  width: 30px; height: 30px;
-  border-radius: 100%;
-  border: 6px solid #1FABB4 ;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
-}
-
-.button-glow:hover::after, button:focus::after {
-
-  animation: none;
-  display: none;
-}
-
-@keyframes ring {
-  0% {
-    width: 30px;
-    height: 30px;
-    opacity: 0.5;
-  }
-  100% {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
-  }
-}
 
 
 
